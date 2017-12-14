@@ -1,0 +1,140 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Autobuses el poblado laureles</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a mat-button>Nosotros</a></li>
+        <li><a mat-button>Ayudas</a></li>
+        <button routerLink="/nosotros" routerLinkActive="active" mat-raised-button color="primary">nosotros</button>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li mat-button><a ><span class="glyphicon glyphicon-user"></span> Rol Usuario</a></li>
+        <li mat-button><a ><span class="glyphicon glyphicon-log-in"></span> Cerrar sesion</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="col-md-2">
+  <mat-card-title>
+    <img mat-card-image src="http://www.corpoblado.org/media/k2/items/cache/b208182456855b5680dad1bcd630c63f_S.jpg" alt="Photo of a Shiba Inu">
+  </mat-card-title>
+  <th>
+  <mat-toolbar>Modulos</mat-toolbar>
+
+    <mat-accordion class="example-headers-align">
+
+      <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle="true">
+        <mat-expansion-panel-header>
+          <mat-panel-description>
+
+            <mat-icon>accessibility</mat-icon>
+            Conductores
+
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+          <button routerLink="/conductor" routerLinkActive="active" mat-raised-button color="primary">Vamos</button>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle="true">
+        <mat-expansion-panel-header>
+          <mat-panel-description>
+            <mat-icon>local_car_wash</mat-icon>
+            Vehículos
+
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+          <button mat-raised-button color="primary">Crear</button>
+          <button mat-raised-button color="primary">Editar</button>
+          <button mat-raised-button color="primary">Ver</button>
+          <button mat-raised-button color="warn">Eliminar</button>
+      </mat-expansion-panel>
+
+  </mat-accordion>
+
+  <mat-accordion class="example-headers-align">
+
+    <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle="true">
+      <mat-expansion-panel-header>
+        <mat-panel-description>
+          <mat-icon>account_circle</mat-icon>
+          Usuarios
+
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+        <button routerLink="/usuarios" routerLinkActive="active" mat-raised-button color="primary">Vamos</button>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle="true">
+      <mat-expansion-panel-header>
+        <mat-panel-description>
+          Factura de compra
+          <mat-icon>chrome_reader_mode</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+        <button mat-raised-button color="primary">Crear</button>
+        <button mat-raised-button color="primary">Editar</button>
+        <button mat-raised-button color="primary">Ver</button>
+        <button mat-raised-button color="warn">Eliminar</button>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+</div>
+
+<div class="col-md-10">
+  <router-outlet></router-outlet>
+</div>
+
+
+
+<!--
+<ul class="topnav">
+  <li><a class="active">Autobuses el poblado laureles S.A</a></li>
+  <li><a mat-button>Nosotros</a></li>
+  <li><a mat-button>Ayudas</a></li>
+  <li><a mat-button>Modulos</a></li>
+  <li class="right"><a mat-button>Cerrar sesion</a></li>
+  <li><a routerLink="/pruebas" routerLinkActive="active">pruebas</a></li>
+</ul>
+
+<div class="contenedor">
+  <ul>
+    <li><a >Logo</a></li>
+    <li><a  mat-button>Modulo</a></li>
+  </ul>
+</div>
+<div class="espacion">
+  <div class="cuerpo">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse sidebar" role="navigation" >
+  <div class="container-fluid">
+
+  <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+  	<ul class="nav navbar-nav">
+  		<li class="dropdown">
+  			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Conductor <span class="caret"></span><span style="font-size:16px;" class="pull-left hidden-xs showopacity glyphicon glyphicon-user"></span></a>
+  			<ul class="dropdown-menu forAnimate" role="menu">
+  				<li><a id="crear"><span class="glyphicon glyphicon-list-alt"></span> Crear</a></li>
+  				<li><a id="editar"><span class="glyphicon glyphicon-edit"></span> Editar</a></li>
+  				<li><a id="ver"><span class="glyphicon glyphicon-lamp"></span> Ver</a></li>
+          <li><a id="eliminar"><span class="glyphicon glyphicon-trash"></span> Eliminar</a></li>
+  				<li class="divider"></li>
+  			</ul>
+  		</li>
+  	</ul>
+  </div>
+  </div>
+</nav>
+-->
